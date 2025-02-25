@@ -1,0 +1,479 @@
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+}
+
+.checkout-container {
+    font-size: 14px;
+    width: 100%;
+    min-height: fit-content;
+    padding: 20px 5%;
+    background-image: linear-gradient(42deg, #f0bee6, #e1b7dc, #909fc9, #8e9962);
+    background-size: cover;
+    background-position: center;
+    grid-template-areas:
+        "navbar"
+        "content";
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 5% 95%;
+    column-gap: 5px;
+    row-gap: 5px;
+    color: #313638;
+}
+
+.checkout-container .navigation-bar {
+    grid-area: navbar;
+    color: rgb(219, 219, 219);
+}
+
+.checkout-container .navigation-bar .navigate-btn-group {
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 3.2px 6.4px 6.4px hsl(0deg 0% 0% / 0.40);
+}
+
+.checkout-container .navigation-bar .navigate-btn-group a {
+    text-decoration: none;
+    color: #313638;
+    font-size: 14px;
+}
+
+.checkout-container .navigation-bar .navigate-btn-group a:hover {
+    color: rgb(236, 41, 15);
+}
+
+.checkout-content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+        "table btn-group";
+    grid-template-columns: minmax(200px, 3fr) minmax(400px, 1fr);
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 3.2px 6.4px 6.4px hsl(0deg 0% 0% / 0.40);
+    padding: 1%;
+}
+
+.checkout-tables {
+    grid-area: table;
+}
+
+.checkout-table th {
+    color: #313638;
+    font-weight: 400;
+    font-size: 16px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-table img {
+    width: 100%;
+}
+
+.checkout-table .delete-icon {
+    width: 100%;
+}
+
+
+.image {
+    width: 10%;
+}
+
+.description {
+    width: 30%;
+}
+
+.price {
+    width: 20%;
+}
+
+.quantity {
+    width: 10%;
+}
+
+.sum {
+    width: 20%;
+}
+
+.delete {
+    width: 5%;
+}
+
+.checkout-table .product-quantity input {
+    width: 50px;
+    padding: 6%;
+}
+
+.checkout-table .product-quantity input:focus {
+    border: none;
+    background: #dbd5d5;
+    outline: 1px solid #313638;
+}
+
+
+.checkout-table .delete-btn img {
+    width: 14px;
+    filter: invert(16%) sepia(1%) saturate(4243%) hue-rotate(151deg) brightness(90%) contrast(83%);
+}
+
+.checkout-table .delete-btn img:hover {
+    filter: invert(25%) sepia(97%) saturate(5359%) hue-rotate(359deg) brightness(98%) contrast(91%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.checkout-table .product-price,
+.checkout-table .product-sum {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.checkout-table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.checkout-table tr.border-bottom {
+    border-bottom: 1px dotted #b6b6b6;
+}
+
+
+.checkout-btns-group {
+    grid-area: btn-group;
+    height: 300px;
+    display: grid;
+    grid-template-areas:
+        "sum"
+        "btn"
+        "input"
+        "info";
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+    row-gap: 20px;
+    font-size: 14px;
+    color: #313638;
+    margin-left: 15px;
+}
+
+.checkout-btns-group .sum-group {
+    display: grid;
+    grid-template-areas: "text value";
+    font-size: 16px;
+    height: fit-content;
+}
+
+.sum-text {
+    grid-area: text;
+
+}
+
+.sum-value {
+    grid-area: value;
+    font-size: 18px;
+    text-align: right;
+    font-weight: 600;
+    color: #313638;
+    text-shadow: 2px 1px #0f0f11;
+}
+
+.checkout-btns-group .btn-group {
+    grid-area: btn;
+    display: flex;
+    gap: 10px;
+}
+
+.checkout-btns-group .btn-group a {
+    text-decoration: none;
+    width: 50%;
+}
+
+.checkout-btns-group .btn-group .btn-homepage {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    color: white;
+    background-color: #564599;
+    border: none;
+    border-radius: 25px;
+}
+
+.checkout-btns-group .btn-group .btn-homepage:hover {
+    transition: 0.5s;
+    background-color: #345cb1;
+    cursor: pointer;
+}
+
+.checkout-btns-group .btn-group .btn-homepage:not(:hover) {
+    transition: 0.5s;
+}
+
+.checkout-btns-group .btn-group .btn-checkout {
+    color: #545fc5;
+    height: 35px;
+    width: 50%;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #483ac9;
+    border-radius: 20px;
+}
+
+.checkout-btns-group .btn-group .btn-checkout:hover {
+    transition: 0.5s;
+    color: white;
+    background-color: #5f43bc;
+    cursor: pointer;
+}
+
+.checkout-btns-group .btn-group .btn-checkout:not(:hover) {
+    transition: 0.5s;
+}
+
+.checkout-btns-group .note-group {
+    grid-area: input;
+}
+
+.checkout-btns-group .note-group .note-input {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 1%;
+    height: 100%;
+    resize: none;
+}
+
+.checkout-btns-group .note-group .note-input:focus {
+    outline: 1px solid #313638;
+}
+
+.checkout-btns-group .note-group .note-input::placeholder {
+    color: #cecbcb;
+}
+
+.checkout-btns-group .text {
+    grid-area: info;
+    margin-top: 30px;
+}
+
+.text .title {
+    font-size: 16px;
+    border-bottom: 1px dotted #b6b6b6;
+}
+
+.text .info-group {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.text .info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.empty-content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty-content .empty-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.empty-content a {
+    text-decoration: none;
+}
+
+.empty-content .btn-homepage {
+    margin-top: 10px;
+    padding: 7px 20px;
+    height: 35px;
+    font-size: 14px;
+    color: white;
+    background-color: #5736b1;
+    border: none;
+    border-radius: 25px;
+}
+
+.empty-content .btn-homepage:hover {
+    transition: 0.5s;
+    background-color: #7860b8;
+    cursor: pointer;
+}
+
+.empty-content .btn-homepage:not(:hover) {
+    transition: 0.5s;
+}
+
+.app-container {
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+
+.app-google {
+    margin: 50px;
+}
+
+.app-google img {
+    height: 50px;
+    cursor: pointenr;
+}
+
+.app-container p {
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+}
+
+.app-container input {
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.footer-top img {
+    height: 50px;
+}
+
+.footer-top li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.footer-top li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-top li:last-child::after {
+    display: none;
+}
+
+.footer-top li:last-child a {
+    margin-right: 12px;
+    color: #333;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-bottom {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    color: #313638;
+    background-color: rgba(175, 206, 214, 0.184);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 20px 5%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.column h2 {
+    font-size: 16px;
+
+}
+
+.footer-subtitle {
+    margin-top: 50px;
+}
+
+.column p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.icon-media {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.icon-media img {
+    width: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.column .footer-subtext {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.column .footer-subtext:hover {
+    color: rgb(236, 41, 15);
+}
+
+.column .footer-subtitle {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.footer-horizontal-line {
+    border: 1px solid rgb(255, 0, 0);
+    width: 5em;
+}
+
+.footer-title {
+    display: flex;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-title img {
+    width: 40px;
+    margin-right: 10px;
+}
+

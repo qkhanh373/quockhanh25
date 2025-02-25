@@ -1,0 +1,147 @@
+.list-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9c9c9c;
+    width: 100%;
+}
+
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    flex-wrap: wrap;
+
+}
+
+.products a {
+    text-decoration: none;
+}
+
+.product {
+    width: 19%;
+
+    height: 25em;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.product:hover img {
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+
+.product .product-img {
+    width: 100%;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product .product-img .discount-percent {
+    color: #fff;
+    background-color: #a2102e;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 5px;
+    padding: 1%;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.product .product-title {
+    text-align: center;
+}
+
+.product .product-title a {
+
+    font-size: 16px;
+    color: #313638;
+}
+
+.product .product-title a:hover {
+    color: rgb(236, 41, 15);
+}
+
+.product .product-price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product .product-price .original-price {
+    font-size: 14px;
+    color: gray;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.product .product-price .discount-price {
+    font-size: 16px;
+    color: #313638;
+    text-shadow: 2px 1px #d15493;
+}
+
+.product:hover .product-group-btn {
+    transform: translate(-110px);
+    transition: 0.5s;
+}
+
+.product:not(:hover) .product-group-btn {
+    transform: translate(110px);
+    transition: 1s;
+}
+
+
+
+.product .product-group-btn .cart-btn img,
+.product .product-group-btn .detail-btn img {
+    width: 20px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(350deg) brightness(109%) contrast(105%);
+}
+
+.product .product-group-btn .cart-btn {
+    background: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -300px;
+    right: -100px;
+    border: none;
+    background-color: #d15493;
+    padding: 2%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.product .product-group-btn .cart-btn:hover,
+.product .product-group-btn .detail-btn:hover {
+    transform: rotate(360deg);
+    transition: 0.8s;
+}
+
+.product .product-group-btn .detail-btn {
+    background: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #d15493;
+    align-items: center;
+    top: -260px;
+    right: -100px;
+    border: none;
+    border-radius: 50%;
+    padding: 2%;
+}

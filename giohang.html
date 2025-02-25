@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="giohang.css">
+    <link rel="shortcut icon" href="img/LOGO-removebg-preview.png" type="image/x-icon">
+    <title>Giohang</title>
+</head>
+
+<body>
+    <my-header></my-header>
+    <div class="checkout-container">
+        <div class="navigation-bar">
+            <div class="navigate-btn-group">
+                <div class="homepage-btn">
+                    <a href="index.html">Trang chủ</a>
+                    
+                </div>
+                <div class="products-btn">
+                    <a>Giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-content">
+            <div class="checkout-tables">
+                <table class="checkout-table">
+                    <tr>
+                        <th class="image">Sản phẩm</th>
+                        <th class="description">Mô Tả</th>
+                        <th class="price">Giá</th>
+                        <th class="quantity">Số Lượng</th>
+                        <th class="sum">Tổng</th>
+                        <th class="delete">Xóa</th>
+                    </tr>
+                    <tr class="border-bottom product1 product">
+                        <td class="product-image"><img src="img/sp5.jpg"></td>
+                        <td class="product-description">Váy Chữ A Cổ Sơ Mi Thắt Nơ</td>
+                        <td class="product-price">590,000₫</td>
+                        <td class="product-quantity"><input type="number" value="1" min="1" onchange="calculate(1)">
+                        </td>
+                        <td class="product-sum">590,000₫</td>
+                        <td class="delete-btn"><img src="img/th__1_-removebg-preview.png" class="delete-icon"
+                                onclick="deleteCheckout(1)"></td>
+                    </tr>
+                    <tr class="border-bottom product2 product">
+                        <td class="product-image"><img src="img/sp7.jpg"></td>
+                        <td class="product-description">Váy 2 Dây Dáng Dài Thắt Dây
+                        </td>
+                        <td class="product-price">229,000₫</td>
+                        <td class="product-quantity"><input type="number" value="1" min="1" onchange="calculate(2)">
+                        </td>
+                        <td class="product-sum">229,000₫</td>
+                        <td class="delete-btn"><img src="img/th__1_-removebg-preview.png" class="delete-icon"
+                                onclick="deleteCheckout(2)"></td>
+                    </tr>
+                    <tr class="product3 product">
+                        <td class="product-image"><img src="img/sp6.jpg"></td>
+                        <td class="product-description">Váy 2 Dây Chữ A Chiết Ngực
+                        </td>
+                        <td class="product-price">290,000₫</td>
+                        <td class="product-quantity"><input type="number" value="1" min="1" onchange="calculate(3)">
+                        </td>
+                        <td class="product-sum">290,000₫</td>
+                        <td class="delete-btn"><img src="img/th__1_-removebg-preview.png" class="delete-icon"
+                                onclick="deleteCheckout(3)"></td>   
+                    </tr>
+                    <tr class="border-bottom product1 product">
+                        <td class="product-image"><img src="img/m3.jpg"></td>
+                        <td class="product-description">Váy Chữ A Cổ Sơ Mi Thắt Nơ</td>
+                        <td class="product-price">390,000₫</td>
+                        <td class="product-quantity"><input type="number" value="1" min="1" onchange="calculate(4)">
+                        </td>
+                        <td class="product-sum">390,000₫</td>
+                        <td class="delete-btn"><img src="img/th__1_-removebg-preview.png" class="delete-icon"
+                                onclick="deleteCheckout(4)"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="checkout-btns-group">
+                <div class="sum-group">
+                    <div class="sum-text">Tổng</div>
+                    <div class="sum-value">1,499,000₫</div>
+                </div>
+                <div class="btn-group">
+                    <a href="donu.html"><button class="btn-homepage">TIẾP TỤC MUA SẮM</button></a>
+                    <button class="btn-checkout">THANH TOÁN</button>
+                </div>
+                <div class="note-group">
+                    <div class="note-text">Chú thích</div>
+                    <textarea type="text" class="note-input" placeholder="Mô tả rõ hơn về đơn hàng"
+                        resize="none"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="row">
+                <div class="column">
+                    <div class="footer-title">
+                        <img src="img/shopping-cart-icon-19-removebg-preview.png">
+                        <div>
+                            <h2>CHÍNH SÁCH GIAO HÀNG</h2>
+                            <p>Nhận hàng và thanh toán tại nhà</p>
+                        </div>
+                    </div>
+    
+                    <h2 class="footer-subtitle">GIỚI THIỆU VỀ FASTIONFASTION</h2>
+                    <hr class="footer-horizontal-line">
+                    <p class="footer-subtext">Về chúng tôi </br>
+                        Tư vấn mua hàng </br>
+                        Tuyển dụng</p>
+                    <div class="icon-media">
+                        <img src="img/png-transparent-facebook-logo-logo-facebook-icon-facebook-logo-brand-social-network-scalable-vector-graphics-removebg-preview.png">
+                        <img src="img/instagram-icon-png-instagram-icon-1600-removebg-preview.png">
+                        <img src="img/p-icon-19.jpg">
+                        <img src="img/twitter-icone.png">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="footer-title">
+                        <img src="img/Icon-Doi-Tra-Hang-removebg-preview.png">
+                        <div>
+                            <h2>ĐỔI TRẢ DỄ DÀNG</h2>
+                            <p>1 đổi 1 trong 7 ngày</p>
+                        </div>
+                    </div>
+    
+                    <h2 class="footer-subtitle">CHÍNH SÁCH CHUNG</h2>
+                    <hr class="footer-horizontal-line">
+                    <p class="footer-subtext">Chính sách trả góp</p>
+                    <p class="footer-subtext">Chính sách bảo vệ thông tin cá nhân</p>
+                    <p class="footer-subtext">Chính sách bảo hành</p>
+                    <p class="footer-subtext">Chính sách đổi - trả hàng</p>
+                    <p class="footer-subtext">Chính sách vận chuyển</p>
+                </div>
+    
+                <div class="column">
+                    <div class="footer-title">
+                        <img src="img/png-clipart-coupon-discounts-and-allowances-computer-icons-coupon-miscellaneous-text-removebg-preview.png">
+                        <div>
+                            <h2>GIÁ LUÔN LUÔN RẺ NHẤT</h2>
+                            <p>Giá cả hợp lý, nhiều ưu đãi tốt</p>
+                        </div>
+                    </div>
+                    </br>
+    
+                    <h2 class="footer-subtitle">THÔNG TIN KHUYẾN MÃI</h2>
+                    <hr class="footer-horizontal-line">
+                    <p class="footer-subtext">
+                        Tổng hợp khuyến mãi
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="footer-title">
+                        <img src="img/cham-soc-khach-hang-qua-dien-thoai-removebg-preview.png">
+                        <div>
+                            <h2>HỖ TRỢ NHIỆT TÌNH</h2>
+                            <p>Tư vấn, giải đáp mọi thắc mắc</p>
+                        </div>
+                    </div>
+    
+                    <h2 class="footer-subtitle">HỖ TRỢ KHÁCH HÀNG</h2>
+                    <hr class="footer-horizontal-line">
+                    <p class="footer-subtext">Tổng hợp Hotline CSKH, phản ánh.</p>
+                    <p class="footer-subtext"></p>Lắp đặt phòng net</p>
+                    <p class="footer-subtext"></p>Thiết bị Mining</p>
+                    <p class="footer-subtext"></p>Tra cứu bảo hành</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
